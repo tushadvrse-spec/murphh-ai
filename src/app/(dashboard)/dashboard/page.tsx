@@ -49,7 +49,7 @@ export default function DashboardOverviewPage() {
               className="inline-flex items-center gap-2 bg-white text-indigo-950 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-indigo-50 transition-colors shadow-xs"
             >
               <PlusCircle className="w-4 h-4 text-indigo-600" />
-              Generate Next Product
+              Generate New Product
             </Link>
           </div>
         </div>

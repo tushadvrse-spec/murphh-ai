@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
-  Compass,
   Package,
   Store,
   BarChart3,
@@ -22,7 +21,6 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
 
   const navItems = [
     { label: 'Overview', href: '/dashboard', icon: LayoutDashboard },
-    { label: 'Discover Product Ideas', href: '/dashboard/discover', icon: Compass },
     { label: 'My Products', href: '/dashboard/products', icon: Package },
     { label: 'My Storefront', href: '/dashboard/storefront', icon: Store },
     { label: 'Sales & Analytics', href: '/dashboard/analytics', icon: BarChart3 },
