@@ -142,9 +142,9 @@ export default function ProductEditorPage() {
       />
 
       {/* Editor Sub-header */}
-      <div className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between sticky top-0 z-20 shadow-2xs">
+      <div className="bg-white border-b border-gray-300 px-6 py-3 flex items-center justify-between sticky top-0 z-20 shadow-xs">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 capitalize">
+          <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 capitalize border border-indigo-200">
             {product.format} Studio
           </span>
           <span className="font-bold text-sm text-gray-900 truncate max-w-xs sm:max-w-md">
@@ -159,11 +159,11 @@ export default function ProductEditorPage() {
 
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}
-          <div className="flex bg-gray-100 p-1 rounded-xl text-xs font-medium">
+          <div className="flex bg-gray-100 p-1 rounded-xl text-xs font-medium border border-gray-200">
             <button
               onClick={() => setViewMode('editor')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors ${
-                viewMode === 'editor' ? 'bg-white text-gray-900 shadow-2xs font-semibold' : 'text-gray-500 hover:text-gray-900'
+                viewMode === 'editor' ? 'bg-white text-gray-900 shadow-xs font-semibold' : 'text-gray-500 hover:text-gray-900'
               }`}
             >
               <Edit3 className="w-3.5 h-3.5" />
@@ -172,7 +172,7 @@ export default function ProductEditorPage() {
             <button
               onClick={() => setViewMode('preview')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors ${
-                viewMode === 'preview' ? 'bg-white text-gray-900 shadow-2xs font-semibold' : 'text-gray-500 hover:text-gray-900'
+                viewMode === 'preview' ? 'bg-white text-gray-900 shadow-xs font-semibold' : 'text-gray-500 hover:text-gray-900'
               }`}
             >
               <Eye className="w-3.5 h-3.5" />
@@ -182,7 +182,7 @@ export default function ProductEditorPage() {
 
           <button
             onClick={() => router.push(`/dashboard/products/${product.id}/landing`)}
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors shadow-2xs"
+            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors shadow-xs"
           >
             <span>Next: Landing Page</span>
             <ArrowRight className="w-4 h-4" />
@@ -200,14 +200,14 @@ export default function ProductEditorPage() {
       ) : (
         <div className="flex min-h-[calc(100vh-130px)]">
           {/* Chapter / Module Sidebar Navigation */}
-          <aside className="w-72 border-r border-gray-200 bg-white p-4 space-y-4 shrink-0 hidden md:block">
+          <aside className="w-72 border-r border-gray-300 bg-white p-4 space-y-4 shrink-0 hidden md:block shadow-xs">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold uppercase tracking-wider text-gray-400">
                 Chapters & Modules
               </span>
               <button
                 onClick={handleAddSection}
-                className="p-1 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-indigo-600 transition-colors"
+                className="p-1 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-indigo-600 transition-colors border border-gray-200"
                 title="Add Section"
               >
                 <Plus className="w-4 h-4" />
@@ -221,8 +221,8 @@ export default function ProductEditorPage() {
                   onClick={() => setActiveSectionIndex(idx)}
                   className={`w-full text-left p-3 rounded-xl text-xs transition-colors flex items-start gap-2.5 ${
                     activeSectionIndex === idx
-                      ? 'bg-indigo-50/80 text-indigo-900 font-semibold border border-indigo-100'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                      ? 'bg-indigo-50 text-indigo-900 font-semibold border-2 border-indigo-300 shadow-2xs'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-transparent'
                   }`}
                 >
                   <span
@@ -242,7 +242,7 @@ export default function ProductEditorPage() {
               ))}
             </div>
 
-            <div className="pt-4 border-t border-gray-100 text-[11px] text-gray-400 flex items-center gap-1.5">
+            <div className="pt-4 border-t border-gray-200 text-[11px] text-gray-400 flex items-center gap-1.5">
               <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
               <span>{product.content_json.sections.length} total chapters</span>
             </div>
@@ -251,7 +251,7 @@ export default function ProductEditorPage() {
           {/* Main Chapter Content Editor */}
           <div className="flex-1 p-6 sm:p-10 max-w-4xl mx-auto space-y-6">
             {/* AI Assistant Rewrite Toolbar */}
-            <div className="bg-white border border-indigo-100/80 rounded-2xl p-4 shadow-2xs space-y-2">
+            <div className="bg-white border border-indigo-200 rounded-2xl p-4 shadow-sm space-y-2">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-2 text-xs font-bold text-gray-900">
                   <Wand2 className="w-4 h-4 text-indigo-600" />
@@ -297,7 +297,7 @@ export default function ProductEditorPage() {
             </div>
 
             {/* Chapter Header Form */}
-            <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
+            <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
                   Chapter {activeSectionIndex + 1}
@@ -321,7 +321,7 @@ export default function ProductEditorPage() {
                   type="text"
                   value={activeSection.title}
                   onChange={(e) => handleUpdateSectionField('title', e.target.value)}
-                  className="w-full text-base font-bold text-gray-950 border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                  className="w-full text-base font-bold text-gray-950 border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
                 />
               </div>
 
@@ -333,13 +333,13 @@ export default function ProductEditorPage() {
                   type="text"
                   value={activeSection.subtitle || ''}
                   onChange={(e) => handleUpdateSectionField('subtitle', e.target.value)}
-                  className="w-full text-xs text-gray-600 border border-gray-200 rounded-xl px-3.5 py-2 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                  className="w-full text-xs text-gray-600 border border-gray-300 rounded-xl px-3.5 py-2 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
                 />
               </div>
             </div>
 
             {/* Rich Markdown Editor Body */}
-            <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-3">
+            <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
                 <label className="block text-xs font-bold uppercase tracking-wider text-gray-500">
                   Chapter Content (Markdown Supported)
@@ -353,7 +353,7 @@ export default function ProductEditorPage() {
                 rows={16}
                 value={activeSection.content}
                 onChange={(e) => handleUpdateSectionContent(e.target.value)}
-                className="w-full font-mono text-sm leading-relaxed text-gray-800 border border-gray-200 rounded-xl p-4 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                className="w-full font-mono text-sm leading-relaxed text-gray-800 border border-gray-300 rounded-xl p-4 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
               />
             </div>
           </div>

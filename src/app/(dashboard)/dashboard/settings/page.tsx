@@ -41,8 +41,8 @@ export default function SettingsPage() {
       )}
 
       {/* Stripe Connect Card */}
-      <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-        <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+      <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+        <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
           <CreditCard className="w-4 h-4 text-indigo-600" />
           <span>Payouts & Payment Gateway (Stripe Connect)</span>
         </div>
@@ -71,8 +71,8 @@ export default function SettingsPage() {
       </div>
 
       {/* AI Engine & API Keys Card */}
-      <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-        <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+      <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+        <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
           <Key className="w-4 h-4 text-indigo-600" />
           <span>AI Engine Configuration</span>
         </div>

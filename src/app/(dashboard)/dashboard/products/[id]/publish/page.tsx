@@ -85,8 +85,8 @@ export default function PublishProductPage() {
         </div>
 
         {/* Live Storefront URL Card */}
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+        <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
             <Globe className="w-4 h-4 text-indigo-600" />
             <span>Public Storefront Link</span>
           </div>
@@ -96,14 +96,14 @@ export default function PublishProductPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-            <div className="flex-1 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-mono text-gray-700 truncate">
+            <div className="flex-1 bg-gray-50 border border-gray-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-mono text-gray-800 truncate">
               {typeof window !== 'undefined' ? window.location.origin : 'https://murphh.ai'}
               {publicUrl}
             </div>
 
             <button
               onClick={handleCopyLink}
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors shadow-2xs"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors shadow-2xs"
             >
               {isCopied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
               <span>{isCopied ? 'Copied!' : 'Copy Link'}</span>
@@ -112,7 +112,7 @@ export default function PublishProductPage() {
             <Link
               href={publicUrl}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors border border-indigo-200/50"
+              className="inline-flex items-center justify-center gap-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors border border-indigo-200"
             >
               <ExternalLink className="w-4 h-4" />
               <span>Visit Page</span>
@@ -121,8 +121,8 @@ export default function PublishProductPage() {
         </div>
 
         {/* Verification Checkpoints */}
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-          <h3 className="text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+        <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+          <h3 className="text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
             Pre-Flight System Verification
           </h3>
 

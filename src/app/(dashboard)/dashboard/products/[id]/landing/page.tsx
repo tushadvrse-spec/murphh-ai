@@ -102,8 +102,8 @@ export default function LandingPageBuilderPage() {
         )}
 
         {/* Pricing & Offer Settings */}
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+        <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
             <DollarSign className="w-4 h-4 text-emerald-600" />
             <span>Pricing & Checkout Configuration</span>
           </div>
@@ -119,7 +119,7 @@ export default function LandingPageBuilderPage() {
                   type="number"
                   value={product.price}
                   onChange={(e) => setProduct({ ...product, price: parseFloat(e.target.value) || 0 })}
-                  className="w-full text-sm pl-8 pr-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-bold"
+                  className="w-full text-sm pl-8 pr-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-bold bg-white"
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function LandingPageBuilderPage() {
                 type="text"
                 value={pageData.ctaText}
                 onChange={(e) => setPageData({ ...pageData, ctaText: e.target.value })}
-                className="w-full text-sm px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                className="w-full text-sm px-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
               />
             </div>
 
@@ -144,15 +144,15 @@ export default function LandingPageBuilderPage() {
                 type="text"
                 value={pageData.heroBadge || ''}
                 onChange={(e) => setPageData({ ...pageData, heroBadge: e.target.value })}
-                className="w-full text-sm px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                className="w-full text-sm px-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
               />
             </div>
           </div>
         </div>
 
         {/* Hero Copy */}
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+        <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
             <LayoutTemplate className="w-4 h-4 text-indigo-600" />
             <span>Primary Sales Headlines</span>
           </div>
@@ -184,8 +184,8 @@ export default function LandingPageBuilderPage() {
 
         {/* What You Will Learn & Target Audience */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-3">
-            <label className="block text-xs font-bold uppercase tracking-wider text-gray-400">
+          <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-3">
+            <label className="block text-xs font-bold uppercase tracking-wider text-indigo-600">
               Key Deliverables & Outcomes
             </label>
             <div className="space-y-2">
@@ -200,15 +200,15 @@ export default function LandingPageBuilderPage() {
                       updated[i] = e.target.value;
                       setPageData({ ...pageData, whatYouWillLearn: updated });
                     }}
-                    className="w-full text-xs text-gray-800 border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-indigo-500"
+                    className="w-full text-xs text-gray-800 border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-indigo-500 bg-white"
                   />
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-3">
-            <label className="block text-xs font-bold uppercase tracking-wider text-gray-400">
+          <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-3">
+            <label className="block text-xs font-bold uppercase tracking-wider text-red-600">
               Target Problems Solved
             </label>
             <div className="space-y-2">
@@ -223,7 +223,7 @@ export default function LandingPageBuilderPage() {
                       updated[i] = e.target.value;
                       setPageData({ ...pageData, targetProblems: updated });
                     }}
-                    className="w-full text-xs text-gray-800 border border-gray-200 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-indigo-500"
+                    className="w-full text-xs text-gray-800 border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-indigo-500 bg-white"
                   />
                 </div>
               ))}
@@ -232,8 +232,8 @@ export default function LandingPageBuilderPage() {
         </div>
 
         {/* FAQs and Guarantee */}
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
-          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+        <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
             <HelpCircle className="w-4 h-4 text-indigo-600" />
             <span>Frequently Asked Questions & Guarantee</span>
           </div>

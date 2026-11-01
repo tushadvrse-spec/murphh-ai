@@ -69,7 +69,7 @@ export default function DashboardOverviewPage() {
 
       {/* Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white border border-gray-200/80 rounded-xl p-5 shadow-2xs">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center justify-between text-gray-500 text-xs font-medium">
             <span>Total Sales Revenue</span>
             <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
@@ -85,7 +85,7 @@ export default function DashboardOverviewPage() {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200/80 rounded-xl p-5 shadow-2xs">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center justify-between text-gray-500 text-xs font-medium">
             <span>Completed Orders</span>
             <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600">
@@ -96,7 +96,7 @@ export default function DashboardOverviewPage() {
           <p className="text-xs text-gray-400 mt-1">Across 1 published product</p>
         </div>
 
-        <div className="bg-white border border-gray-200/80 rounded-xl p-5 shadow-2xs">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center justify-between text-gray-500 text-xs font-medium">
             <span>Storefront Page Views</span>
             <div className="p-2 rounded-lg bg-amber-50 text-amber-600">
@@ -107,7 +107,7 @@ export default function DashboardOverviewPage() {
           <p className="text-xs text-emerald-600 font-medium mt-1">4.2% visitor conversion</p>
         </div>
 
-        <div className="bg-white border border-gray-200/80 rounded-xl p-5 shadow-2xs">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center justify-between text-gray-500 text-xs font-medium">
             <span>Average Order Value</span>
             <div className="p-2 rounded-lg bg-violet-50 text-violet-600">
@@ -122,8 +122,8 @@ export default function DashboardOverviewPage() {
       </div>
 
       {/* Guided Creation Workflow Action Card */}
-      <div className="bg-white border border-indigo-100 rounded-2xl p-6 shadow-2xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-100">
+      <div className="bg-white border border-indigo-300/80 rounded-2xl p-6 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-200">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
               Recommended Next Action
@@ -188,21 +188,21 @@ export default function DashboardOverviewPage() {
 
           <div className="space-y-3">
             {/* Published Product Card */}
-            <div className="bg-white border border-gray-200/80 rounded-xl p-5 hover:border-indigo-200 transition-colors shadow-2xs">
+            <div className="bg-white border border-gray-300 rounded-2xl p-5 hover:border-indigo-400 transition-colors shadow-sm">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-300">
                       Published & Selling
                     </span>
-                    <span className="text-xs text-gray-400 capitalize font-medium">
+                    <span className="text-xs text-gray-500 capitalize font-medium">
                       {initialProduct.format}
                     </span>
                   </div>
                   <h4 className="text-base font-bold text-gray-950">
                     {initialProduct.title}
                   </h4>
-                  <p className="text-xs text-gray-500 line-clamp-1">
+                  <p className="text-xs text-gray-600 line-clamp-1">
                     {initialProduct.description}
                   </p>
                 </div>
@@ -211,12 +211,12 @@ export default function DashboardOverviewPage() {
                   <p className="text-lg font-bold text-gray-900">
                     {formatCurrency(initialProduct.price)}
                   </p>
-                  <p className="text-[11px] text-gray-400">3 modules • PDF</p>
+                  <p className="text-[11px] text-gray-500">3 modules • PDF</p>
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
-                <div className="flex items-center gap-3 text-gray-500">
+              <div className="mt-4 pt-3 border-t border-gray-200 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-3 text-gray-600">
                   <span>{initialOrders.length} sales</span>
                   <span>•</span>
                   <span>{formatCurrency(totalRevenue)} revenue</span>
@@ -224,14 +224,14 @@ export default function DashboardOverviewPage() {
                 <div className="flex items-center gap-2">
                   <Link
                     href={`/dashboard/products/${initialProduct.id}/edit`}
-                    className="font-medium text-gray-700 hover:text-indigo-600 px-2.5 py-1 rounded-md hover:bg-gray-100 transition-colors"
+                    className="font-medium text-gray-700 hover:text-indigo-600 px-2.5 py-1 rounded-md hover:bg-gray-100 transition-colors border border-gray-200"
                   >
                     Edit Content
                   </Link>
                   <Link
                     href="/elena/async-playbook"
                     target="_blank"
-                    className="font-semibold text-indigo-600 hover:text-indigo-700 px-2.5 py-1 rounded-md hover:bg-indigo-50 transition-colors flex items-center gap-1"
+                    className="font-semibold text-indigo-600 hover:text-indigo-700 px-2.5 py-1 rounded-md hover:bg-indigo-50 transition-colors flex items-center gap-1 border border-indigo-200"
                   >
                     Storefront
                     <ExternalLink className="w-3 h-3" />
@@ -241,7 +241,7 @@ export default function DashboardOverviewPage() {
             </div>
 
             {/* Candidate Next Product */}
-            <div className="bg-gray-50/70 border border-dashed border-gray-300 rounded-xl p-5 hover:bg-white hover:border-indigo-300 transition-all">
+            <div className="bg-white border-2 border-dashed border-gray-300 rounded-2xl p-5 hover:border-indigo-400 transition-all shadow-xs">
               <div className="flex items-center justify-between">
                 <div>
                   <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-indigo-50 text-indigo-700">
@@ -277,7 +277,7 @@ export default function DashboardOverviewPage() {
             </Link>
           </div>
 
-          <div className="bg-white border border-gray-200/80 rounded-xl divide-y divide-gray-100 shadow-2xs">
+          <div className="bg-white border border-gray-300 rounded-2xl divide-y divide-gray-200 shadow-sm overflow-hidden">
             {initialOrders.map((order) => (
               <div key={order.id} className="p-4 space-y-1">
                 <div className="flex items-center justify-between">
@@ -299,7 +299,7 @@ export default function DashboardOverviewPage() {
             ))}
           </div>
 
-          <div className="bg-indigo-50/70 border border-indigo-100 rounded-xl p-4 text-xs text-indigo-900 space-y-1">
+          <div className="bg-indigo-50/80 border border-indigo-200 rounded-2xl p-4 text-xs text-indigo-900 space-y-1 shadow-2xs">
             <p className="font-semibold flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-indigo-600" />
               Automated Digital Delivery Active

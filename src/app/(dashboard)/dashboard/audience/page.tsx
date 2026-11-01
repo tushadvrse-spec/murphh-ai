@@ -92,8 +92,8 @@ export default function AudienceIntelligencePage() {
         )}
 
         {/* Input & Source Section */}
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-5">
-          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+        <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-5">
+          <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
             <FileText className="w-4 h-4 text-indigo-600" />
             <span>Content Ingestion & Profile Inputs</span>
           </div>
@@ -107,7 +107,7 @@ export default function AudienceIntelligencePage() {
                 type="text"
                 value={profile.creator_name}
                 onChange={(e) => setProfile({ ...profile, creator_name: e.target.value })}
-                className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
               />
             </div>
 
@@ -119,7 +119,7 @@ export default function AudienceIntelligencePage() {
                 type="text"
                 value={profile.niche || ''}
                 onChange={(e) => setProfile({ ...profile, niche: e.target.value })}
-                className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function AudienceIntelligencePage() {
               rows={2}
               value={profile.bio || ''}
               onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
-              className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
             />
           </div>
 
@@ -145,7 +145,7 @@ export default function AudienceIntelligencePage() {
               placeholder="Paste newsletter excerpts, YouTube transcripts, popular threads, or common audience questions here to enrich the AI analysis..."
               value={sampleInput}
               onChange={(e) => setSampleInput(e.target.value)}
-              className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 placeholder:text-gray-400"
+              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 placeholder:text-gray-400 bg-white"
             />
           </div>
         </div>
@@ -159,12 +159,12 @@ export default function AudienceIntelligencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Primary & Sub-Niches */}
-            <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-2xs space-y-3">
+            <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-gray-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
                   Target Niche & Sub-Verticals
                 </span>
-                <span className="p-1 rounded-md bg-indigo-50 text-indigo-600">
+                <span className="p-1 rounded-md bg-indigo-50 text-indigo-600 border border-indigo-100">
                   <Target className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -173,7 +173,7 @@ export default function AudienceIntelligencePage() {
                 {analysis.subNiches.map((sub, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-700"
+                    className="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-800 border border-gray-200"
                   >
                     {sub}
                   </span>
@@ -182,12 +182,12 @@ export default function AudienceIntelligencePage() {
             </div>
 
             {/* Main Themes */}
-            <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-2xs space-y-3">
+            <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-gray-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
                   Core Content Themes
                 </span>
-                <span className="p-1 rounded-md bg-violet-50 text-violet-600">
+                <span className="p-1 rounded-md bg-violet-50 text-violet-600 border border-violet-100">
                   <Sparkles className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -202,17 +202,19 @@ export default function AudienceIntelligencePage() {
             </div>
 
             {/* Audience Core Problems */}
-            <div className="bg-white border border-red-100/80 rounded-2xl p-5 shadow-2xs space-y-3">
+            <div className="bg-white border-2 border-red-200 rounded-2xl p-5 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-red-600">
+                <span className="text-xs font-bold uppercase tracking-wider text-red-700">
                   High-Friction Audience Problems
                 </span>
-                <span className="text-xs text-red-500 font-medium">Buyer pain points</span>
+                <span className="text-xs text-red-600 font-semibold bg-red-50 px-2 py-0.5 rounded-md border border-red-200">
+                  Buyer pain points
+                </span>
               </div>
-              <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-800">
                 {analysis.commonAudienceProblems.map((problem, i) => (
-                  <li key={i} className="flex items-start gap-2 bg-red-50/50 p-2.5 rounded-xl border border-red-100/50">
-                    <span className="text-red-500 font-bold shrink-0">!</span>
+                  <li key={i} className="flex items-start gap-2 bg-red-50/60 p-2.5 rounded-xl border border-red-200">
+                    <span className="text-red-600 font-bold shrink-0">!</span>
                     <span>{problem}</span>
                   </li>
                 ))}
@@ -220,20 +222,20 @@ export default function AudienceIntelligencePage() {
             </div>
 
             {/* Monetization Opportunities */}
-            <div className="bg-white border border-emerald-100/80 rounded-2xl p-5 shadow-2xs space-y-3">
+            <div className="bg-white border-2 border-emerald-200 rounded-2xl p-5 shadow-sm space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
                   Identified Monetization Angles
                 </span>
-                <span className="p-1 rounded-md bg-emerald-50 text-emerald-600">
+                <span className="p-1 rounded-md bg-emerald-50 text-emerald-600 border border-emerald-200">
                   <Lightbulb className="w-3.5 h-3.5" />
                 </span>
               </div>
-              <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
+              <ul className="space-y-2 text-xs sm:text-sm text-gray-800">
                 {analysis.potentialMonetizationOpportunities.map((opp, i) => (
-                  <li key={i} className="flex items-start gap-2 bg-emerald-50/50 p-2.5 rounded-xl border border-emerald-100/50">
+                  <li key={i} className="flex items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-200">
                     <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="font-medium text-gray-900">{opp}</span>
+                    <span className="font-semibold text-gray-900">{opp}</span>
                   </li>
                 ))}
               </ul>
@@ -242,7 +244,7 @@ export default function AudienceIntelligencePage() {
         </div>
 
         {/* Step Progression CTA */}
-        <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-white border-2 border-indigo-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div>
             <h4 className="text-sm font-bold text-indigo-950">
               Ready to see your recommended product opportunities?

@@ -26,7 +26,7 @@ export function ProductDocumentPreview({
   return (
     <div className="w-full max-w-4xl mx-auto">
       {/* Action Bar */}
-      <div className="flex items-center justify-between bg-white border border-gray-200 rounded-xl px-5 py-3 mb-6 shadow-xs print:hidden">
+      <div className="flex items-center justify-between bg-white border border-gray-300 rounded-xl px-5 py-3 mb-6 shadow-sm print:hidden">
         <div className="flex items-center gap-2 text-sm text-gray-600">
           <BookOpen className="w-4 h-4 text-indigo-600" />
           <span className="font-medium text-gray-900">{product.title}</span>
@@ -45,7 +45,7 @@ export function ProductDocumentPreview({
           </button>
           <button
             onClick={() => window.print()}
-            className="flex items-center gap-2 border border-gray-200 hover:bg-gray-50 text-gray-700 text-sm font-medium px-3 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-2 border border-gray-300 hover:bg-gray-50 text-gray-700 text-sm font-medium px-3 py-2 rounded-lg transition-colors"
           >
             <Printer className="w-4 h-4" />
             Print
@@ -54,9 +54,9 @@ export function ProductDocumentPreview({
       </div>
 
       {/* Styled Printable Document Body */}
-      <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-8 sm:p-14 print:p-0 print:border-none print:shadow-none space-y-12 text-gray-900">
+      <div className="bg-white border border-gray-300 shadow-md rounded-2xl p-8 sm:p-14 print:p-0 print:border-none print:shadow-none space-y-12 text-gray-900">
         {/* Cover / Title Page */}
-        <div className="text-center py-16 border-b border-gray-100 print:min-h-[90vh] print:flex print:flex-col print:justify-center">
+        <div className="text-center py-16 border-b border-gray-200 print:min-h-[90vh] print:flex print:flex-col print:justify-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold uppercase tracking-wider mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             {product.format.toUpperCase()} EDITION

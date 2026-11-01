@@ -49,8 +49,8 @@ export default function AnalyticsPage() {
 
       {/* Top Metrics Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-2xs">
-          <div className="flex items-center justify-between text-gray-400 text-xs font-semibold uppercase tracking-wider">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-gray-500 text-xs font-semibold uppercase tracking-wider">
             <span>Gross Revenue</span>
             <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
               <DollarSign className="w-4 h-4" />
@@ -65,8 +65,8 @@ export default function AnalyticsPage() {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-2xs">
-          <div className="flex items-center justify-between text-gray-400 text-xs font-semibold uppercase tracking-wider">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-gray-500 text-xs font-semibold uppercase tracking-wider">
             <span>Paid Customer Orders</span>
             <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600">
               <ShoppingBag className="w-4 h-4" />
@@ -78,8 +78,8 @@ export default function AnalyticsPage() {
           <p className="text-xs text-gray-400 mt-1">0 refunds / 0 disputes</p>
         </div>
 
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-2xs">
-          <div className="flex items-center justify-between text-gray-400 text-xs font-semibold uppercase tracking-wider">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-gray-500 text-xs font-semibold uppercase tracking-wider">
             <span>Visitor Conversion</span>
             <div className="p-2 rounded-lg bg-amber-50 text-amber-600">
               <Eye className="w-4 h-4" />
@@ -93,8 +93,8 @@ export default function AnalyticsPage() {
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200/80 rounded-2xl p-5 shadow-2xs">
-          <div className="flex items-center justify-between text-gray-400 text-xs font-semibold uppercase tracking-wider">
+        <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-gray-500 text-xs font-semibold uppercase tracking-wider">
             <span>Time-To-Product</span>
             <div className="p-2 rounded-lg bg-violet-50 text-violet-600">
               <Calendar className="w-4 h-4" />
@@ -108,8 +108,8 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Orders Table */}
-      <div className="bg-white border border-gray-200/80 rounded-2xl shadow-2xs overflow-hidden space-y-4 p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-100 pb-4">
+      <div className="bg-white border border-gray-300 rounded-2xl shadow-sm overflow-hidden space-y-4 p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-200 pb-4">
           <div>
             <h3 className="text-base font-bold text-gray-950">Customer Order Ledger</h3>
             <p className="text-xs text-gray-500">
@@ -124,7 +124,7 @@ export default function AnalyticsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-gray-100 text-gray-400 uppercase font-semibold text-[10px] tracking-wider">
+              <tr className="border-b border-gray-200 text-gray-500 uppercase font-bold text-[10px] tracking-wider bg-gray-50/50">
                 <th className="py-3 px-3">Customer</th>
                 <th className="py-3 px-3">Product</th>
                 <th className="py-3 px-3">Date</th>
@@ -134,7 +134,7 @@ export default function AnalyticsPage() {
                 <th className="py-3 px-3 text-right">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100 text-gray-700">
+            <tbody className="divide-y divide-gray-200 text-gray-700">
               {initialOrders.map((order) => (
                 <tr key={order.id} className="hover:bg-gray-50/60 transition-colors">
                   <td className="py-3.5 px-3">

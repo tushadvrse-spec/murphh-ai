@@ -8,10 +8,10 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-[#fcfcfd] flex">
+    <div className="min-h-screen bg-[#eef1f6] flex text-gray-900">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block sticky top-0 h-screen">
-        <Suspense fallback={<div className="w-64 bg-white border-r border-gray-200" />}>
+        <Suspense fallback={<div className="w-64 bg-white border-r border-gray-300" />}>
           <Sidebar creatorName={initialCreatorProfile.creator_name} />
         </Suspense>
       </div>

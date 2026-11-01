@@ -59,7 +59,7 @@ export function WorkflowProgressBar({
   const currentIndex = STEPS.findIndex((s) => s.id === currentStep);
 
   return (
-    <div className="bg-white border-b border-gray-200/80 px-6 py-4 shadow-2xs">
+    <div className="bg-white border-b border-gray-300 px-6 py-4 shadow-xs">
       <div className="max-w-6xl mx-auto">
         {/* Step indicator sequence */}
         <div className="flex items-center justify-between">

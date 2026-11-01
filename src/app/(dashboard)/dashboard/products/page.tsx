@@ -46,15 +46,15 @@ export default function ProductsListPage() {
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs hover:border-indigo-200 transition-colors"
+            className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm hover:border-indigo-500 transition-colors"
           >
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 capitalize">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-300 capitalize">
                     {product.status}
                   </span>
-                  <span className="text-xs text-gray-400 capitalize font-medium">
+                  <span className="text-xs text-gray-500 capitalize font-medium">
                     {product.format} Format
                   </span>
                 </div>
@@ -75,7 +75,7 @@ export default function ProductsListPage() {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div className="mt-6 pt-4 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3 text-xs">
               <span className="text-gray-400">
                 Last updated {formatDate(product.updated_at)}
               </span>

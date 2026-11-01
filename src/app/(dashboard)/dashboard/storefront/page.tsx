@@ -54,8 +54,8 @@ export default function StorefrontSettingsPage() {
       )}
 
       {/* Storefront Settings Form */}
-      <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-6">
-        <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
+      <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-6">
+        <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
           <Palette className="w-4 h-4 text-indigo-600" />
           <span>Brand Identity & Visual Tone</span>
         </div>
@@ -69,7 +69,7 @@ export default function StorefrontSettingsPage() {
               type="text"
               value={profile.creator_name}
               onChange={(e) => setProfile({ ...profile, creator_name: e.target.value })}
-              className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
             />
           </div>
 

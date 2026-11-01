@@ -31,9 +31,9 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
   ];
 
   return (
-    <aside className="w-64 border-r border-gray-200/80 bg-white flex flex-col shrink-0 min-h-screen">
+    <aside className="w-64 border-r border-gray-300 bg-white flex flex-col shrink-0 min-h-screen shadow-xs">
       {/* Brand Header */}
-      <div className="h-16 px-6 border-b border-gray-100 flex items-center justify-between">
+      <div className="h-16 px-6 border-b border-gray-200 flex items-center justify-between">
         <Link href="/dashboard" className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-xs">
             M

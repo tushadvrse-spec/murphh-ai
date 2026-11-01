@@ -122,7 +122,7 @@ export default function DiscoverIdeasPage() {
         </div>
 
         {/* Filter Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-gray-200/80 p-3 rounded-2xl shadow-2xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-gray-300 p-3 rounded-2xl shadow-sm">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-500 pl-2">
             <Filter className="w-3.5 h-3.5" />
             <span>Format:</span>
@@ -154,12 +154,12 @@ export default function DiscoverIdeasPage() {
           {filteredIdeas.map((idea) => (
             <div
               key={idea.id || idea.title}
-              className="bg-white border border-gray-200/90 hover:border-indigo-300 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 shadow-2xs hover:shadow-xs group"
+              className="bg-white border border-gray-300 hover:border-indigo-500 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md group"
             >
               <div className="space-y-4">
                 {/* Header Tag & Price */}
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100 uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200 uppercase tracking-wider">
                     {getFormatIcon(idea.format)}
                     <span>{idea.format.replace('_', ' ')}</span>
                   </span>
