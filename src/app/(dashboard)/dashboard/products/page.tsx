@@ -97,7 +97,7 @@ export default function ProductsListPage() {
                 </Link>
 
                 <Link
-                  href="/elena/async-playbook"
+                  href={product.slug ? `/elena/${product.slug}` : '/elena/async-playbook'}
                   target="_blank"
                   className="inline-flex items-center gap-1.5 font-semibold text-indigo-700 bg-white border border-indigo-200 hover:bg-indigo-50 px-3 py-1.5 rounded-lg transition-colors"
                 >

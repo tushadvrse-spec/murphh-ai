@@ -11,7 +11,6 @@ import {
   BarChart3,
   Settings,
   Sparkles,
-  ExternalLink,
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -74,21 +73,6 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
           );
         })}
       </nav>
-
-      {/* Quick Public Preview Link */}
-      <div className="p-3 border-t border-gray-100">
-        <Link
-          href="/elena/async-playbook"
-          target="_blank"
-          className="flex items-center justify-between px-3 py-2 text-xs text-gray-500 hover:text-indigo-600 hover:bg-indigo-50/50 rounded-xl transition-colors group"
-        >
-          <span className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Live Storefront</span>
-          </span>
-          <ExternalLink className="w-3.5 h-3.5 text-gray-400 group-hover:text-indigo-600" />
-        </Link>
-      </div>
 
       {/* Creator Profile Footer */}
       <div className="p-4 border-t border-gray-100 bg-gray-50/50">

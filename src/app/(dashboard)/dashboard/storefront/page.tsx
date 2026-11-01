@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import {
   Store,
-  ExternalLink,
   Globe,
   Palette,
   Sparkles,
@@ -35,15 +33,6 @@ export default function StorefrontSettingsPage() {
             Configure your public creator profile, brand palette, and custom bio.
           </p>
         </div>
-
-        <Link
-          href="/elena/async-playbook"
-          target="_blank"
-          className="inline-flex items-center gap-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl border border-indigo-200/60 transition-colors"
-        >
-          <ExternalLink className="w-4 h-4" />
-          <span>View Public Storefront</span>
-        </Link>
       </div>
 
       {isSaved && (

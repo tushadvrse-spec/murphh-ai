@@ -12,7 +12,6 @@ import {
   TrendingUp,
   Clock,
   CheckCircle2,
-  ExternalLink,
   ChevronRight,
 } from 'lucide-react';
 import {
@@ -51,14 +50,6 @@ export default function DashboardOverviewPage() {
             >
               <PlusCircle className="w-4 h-4 text-indigo-600" />
               Generate Next Product
-            </Link>
-            <Link
-              href="/elena/async-playbook"
-              target="_blank"
-              className="inline-flex items-center gap-2 bg-indigo-800/60 hover:bg-indigo-700/60 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl border border-indigo-400/30 transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-              View Live Storefront
             </Link>
           </div>
         </div>
@@ -224,17 +215,9 @@ export default function DashboardOverviewPage() {
                 <div className="flex items-center gap-2">
                   <Link
                     href={`/dashboard/products/${initialProduct.id}/edit`}
-                    className="font-medium text-gray-700 hover:text-indigo-600 px-2.5 py-1 rounded-md hover:bg-gray-100 transition-colors border border-gray-200"
+                    className="font-medium text-gray-700 hover:text-indigo-600 px-2.5 py-1 rounded-md hover:bg-gray-100 transition-colors border border-gray-200 text-xs"
                   >
                     Edit Content
-                  </Link>
-                  <Link
-                    href="/elena/async-playbook"
-                    target="_blank"
-                    className="font-semibold text-indigo-600 hover:text-indigo-700 px-2.5 py-1 rounded-md hover:bg-indigo-50 transition-colors flex items-center gap-1 border border-indigo-200"
-                  >
-                    Storefront
-                    <ExternalLink className="w-3 h-3" />
                   </Link>
                 </div>
               </div>

@@ -98,6 +98,8 @@ export interface Product {
   user_id: string;
   product_idea_id: string | null;
   title: string;
+  slug?: string;
+  published_url?: string;
   description: string | null;
   format: string;
   status: 'draft' | 'generating' | 'review' | 'published' | 'archived';
