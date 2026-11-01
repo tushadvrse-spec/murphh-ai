@@ -86,13 +86,38 @@ export default function DiscoverIdeasPage() {
             </p>
           </div>
 
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => router.push('/dashboard/audience')}
+              className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs"
+            >
+              <span>Edit Niche & Content</span>
+            </button>
+            <button
+              onClick={handleGenerateIdeas}
+              disabled={isGenerating}
+              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs shrink-0"
+            >
+              <Sparkles className={`w-4 h-4 ${isGenerating ? 'animate-spin' : ''}`} />
+              <span>{isGenerating ? 'Analyzing Opportunities...' : 'Discover More Ideas'}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Active Niche & Source Context Banner */}
+        <div className="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-indigo-600" />
+            <span className="text-gray-600">Currently analyzing niche:</span>
+            <span className="font-bold text-indigo-950 bg-white px-2.5 py-1 rounded-lg border border-indigo-100 shadow-2xs">
+              Productivity & Remote Work Systems
+            </span>
+          </div>
           <button
-            onClick={handleGenerateIdeas}
-            disabled={isGenerating}
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs shrink-0"
+            onClick={() => router.push('/dashboard/audience')}
+            className="text-indigo-600 hover:text-indigo-800 font-semibold underline underline-offset-2 flex items-center gap-1"
           >
-            <Sparkles className={`w-4 h-4 ${isGenerating ? 'animate-spin' : ''}`} />
-            <span>{isGenerating ? 'Analyzing Opportunities...' : 'Discover More Ideas'}</span>
+            <span>Change niche or connect social content in Step 1 →</span>
           </button>
         </div>
 
