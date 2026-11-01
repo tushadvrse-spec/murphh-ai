@@ -22,7 +22,7 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="p-6 sm:p-10 max-w-4xl mx-auto space-y-8">
+    <div className="p-6 sm:p-8 lg:p-10 w-full space-y-8">
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-gray-950">

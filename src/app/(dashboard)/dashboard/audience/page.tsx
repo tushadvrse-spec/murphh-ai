@@ -53,7 +53,7 @@ export default function AudienceIntelligencePage() {
         stepStatusText="Audience Intelligence Agent has extracted your core themes and buyer pain points."
       />
 
-      <div className="p-6 sm:p-10 max-w-5xl mx-auto space-y-8">
+      <div className="p-6 sm:p-8 lg:p-10 w-full space-y-8">
         {/* Page Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>

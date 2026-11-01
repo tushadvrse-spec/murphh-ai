@@ -62,7 +62,7 @@ export default function LandingPageBuilderPage() {
         stepStatusText="Customize your product landing page, pricing, and sales copy before publishing."
       />
 
-      <div className="p-6 sm:p-10 max-w-5xl mx-auto space-y-8">
+      <div className="p-6 sm:p-8 lg:p-10 w-full space-y-8">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>

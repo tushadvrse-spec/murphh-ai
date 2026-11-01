@@ -249,7 +249,7 @@ export default function ProductEditorPage() {
           </aside>
 
           {/* Main Chapter Content Editor */}
-          <div className="flex-1 p-6 sm:p-10 max-w-4xl mx-auto space-y-6">
+          <div className="flex-1 p-6 sm:p-8 lg:p-10 w-full space-y-6">
             {/* AI Assistant Rewrite Toolbar */}
             <div className="bg-white border border-indigo-200 rounded-2xl p-4 shadow-sm space-y-2">
               <div className="flex flex-wrap items-center justify-between gap-2">

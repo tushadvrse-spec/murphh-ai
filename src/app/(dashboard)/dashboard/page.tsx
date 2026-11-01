@@ -28,7 +28,7 @@ export default function DashboardOverviewPage() {
   const averageOrderValue = totalOrders > 0 ? totalRevenue / totalOrders : 0;
 
   return (
-    <div className="p-6 sm:p-10 max-w-6xl mx-auto space-y-8">
+    <div className="p-6 sm:p-8 lg:p-10 w-full space-y-8">
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-950 text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-sm">
         <div className="relative z-10 max-w-2xl space-y-3">

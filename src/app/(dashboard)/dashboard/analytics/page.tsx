@@ -29,7 +29,7 @@ export default function AnalyticsPage() {
   const conversionRate = ((totalOrders / pageViews) * 100).toFixed(1);
 
   return (
-    <div className="p-6 sm:p-10 max-w-6xl mx-auto space-y-8">
+    <div className="p-6 sm:p-8 lg:p-10 w-full space-y-8">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
