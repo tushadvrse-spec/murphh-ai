@@ -21,7 +21,7 @@ export default function DashboardLayout({
         {/* Mobile Header */}
         <header className="lg:hidden h-16 border-b border-gray-200 bg-white px-4 flex items-center justify-between sticky top-0 z-30">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-md bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">
+            <div className="w-7 h-7 rounded-md bg-gray-950 flex items-center justify-center text-white font-bold text-xs">
               M
             </div>
             <span className="font-bold text-sm text-gray-900">Murphh AI</span>

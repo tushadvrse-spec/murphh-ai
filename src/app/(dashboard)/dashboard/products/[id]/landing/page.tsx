@@ -78,7 +78,7 @@ export default function LandingPageBuilderPage() {
             <button
               onClick={handleRegenerate}
               disabled={isRegenerating}
-              className="inline-flex items-center gap-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors border border-indigo-200/60"
+              className="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors border border-gray-300"
             >
               <Sparkles className={`w-4 h-4 ${isRegenerating ? 'animate-spin' : ''}`} />
               <span>{isRegenerating ? 'Writing Sales Copy...' : 'Regenerate Copy with AI'}</span>
@@ -86,7 +86,7 @@ export default function LandingPageBuilderPage() {
 
             <button
               onClick={() => router.push(`/dashboard/products/${product.id}/publish`)}
-              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs"
+              className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs"
             >
               <span>Next: Publish & Launch</span>
               <ArrowRight className="w-4 h-4" />
@@ -119,7 +119,7 @@ export default function LandingPageBuilderPage() {
                   type="number"
                   value={product.price}
                   onChange={(e) => setProduct({ ...product, price: parseFloat(e.target.value) || 0 })}
-                  className="w-full text-sm pl-8 pr-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-bold bg-white"
+                  className="w-full text-sm pl-8 pr-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 font-bold bg-white"
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function LandingPageBuilderPage() {
                 type="text"
                 value={pageData.ctaText}
                 onChange={(e) => setPageData({ ...pageData, ctaText: e.target.value })}
-                className="w-full text-sm px-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                className="w-full text-sm px-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
               />
             </div>
 
@@ -144,7 +144,7 @@ export default function LandingPageBuilderPage() {
                 type="text"
                 value={pageData.heroBadge || ''}
                 onChange={(e) => setPageData({ ...pageData, heroBadge: e.target.value })}
-                className="w-full text-sm px-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                className="w-full text-sm px-3.5 py-2.5 border border-gray-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
               />
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function LandingPageBuilderPage() {
         {/* Hero Copy */}
         <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
           <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-            <LayoutTemplate className="w-4 h-4 text-indigo-600" />
+            <LayoutTemplate className="w-4 h-4 text-gray-950" />
             <span>Primary Sales Headlines</span>
           </div>
 
@@ -165,7 +165,7 @@ export default function LandingPageBuilderPage() {
               type="text"
               value={pageData.headline}
               onChange={(e) => setPageData({ ...pageData, headline: e.target.value })}
-              className="w-full text-base font-bold text-gray-950 px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full text-base font-bold text-gray-950 px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900"
             />
           </div>
 
@@ -177,7 +177,7 @@ export default function LandingPageBuilderPage() {
               rows={2}
               value={pageData.subheadline}
               onChange={(e) => setPageData({ ...pageData, subheadline: e.target.value })}
-              className="w-full text-sm text-gray-700 px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full text-sm text-gray-700 px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900"
             />
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function LandingPageBuilderPage() {
         {/* What You Will Learn & Target Audience */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-3">
-            <label className="block text-xs font-bold uppercase tracking-wider text-indigo-600">
+            <label className="block text-xs font-bold uppercase tracking-wider text-gray-950">
               Key Deliverables & Outcomes
             </label>
             <div className="space-y-2">
@@ -200,7 +200,7 @@ export default function LandingPageBuilderPage() {
                       updated[i] = e.target.value;
                       setPageData({ ...pageData, whatYouWillLearn: updated });
                     }}
-                    className="w-full text-xs text-gray-800 border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-indigo-500 bg-white"
+                    className="w-full text-xs text-gray-800 border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-gray-900 bg-white"
                   />
                 </div>
               ))}
@@ -223,7 +223,7 @@ export default function LandingPageBuilderPage() {
                       updated[i] = e.target.value;
                       setPageData({ ...pageData, targetProblems: updated });
                     }}
-                    className="w-full text-xs text-gray-800 border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-indigo-500 bg-white"
+                    className="w-full text-xs text-gray-800 border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-hidden focus:border-gray-900 bg-white"
                   />
                 </div>
               ))}
@@ -234,7 +234,7 @@ export default function LandingPageBuilderPage() {
         {/* FAQs and Guarantee */}
         <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
           <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-            <HelpCircle className="w-4 h-4 text-indigo-600" />
+            <HelpCircle className="w-4 h-4 text-gray-950" />
             <span>Frequently Asked Questions & Guarantee</span>
           </div>
 
@@ -274,7 +274,7 @@ export default function LandingPageBuilderPage() {
               type="text"
               value={pageData.guaranteeText}
               onChange={(e) => setPageData({ ...pageData, guaranteeText: e.target.value })}
-              className="w-full text-xs text-gray-700 px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              className="w-full text-xs text-gray-700 px-3.5 py-2.5 border border-gray-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900"
             />
           </div>
         </div>
@@ -291,7 +291,7 @@ export default function LandingPageBuilderPage() {
 
           <button
             onClick={() => router.push(`/dashboard/products/${product.id}/publish`)}
-            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-2xs"
+            className="flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-2xs"
           >
             <span>Proceed to Step 5: Publish & Sell</span>
             <ArrowRight className="w-4 h-4" />

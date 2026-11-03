@@ -55,7 +55,7 @@ export default function PublicProductLandingPage() {
   return (
     <div className="min-h-screen bg-[#fafaf9] text-gray-900 font-sans antialiased">
       {/* Top Banner */}
-      <div className="bg-indigo-900 text-indigo-100 text-xs py-2 px-4 text-center font-medium">
+      <div className="bg-black text-gray-200 text-xs py-2 px-4 text-center font-medium border-b border-gray-800">
         <span>Instant Digital Access • Secure 256-Bit Encrypted Checkout</span>
       </div>
 
@@ -64,7 +64,7 @@ export default function PublicProductLandingPage() {
         {/* Hero Section */}
         <div className="text-center space-y-6">
           {page.heroBadge && (
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 border border-gray-300 text-gray-900 text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{page.heroBadge}</span>
             </div>
@@ -82,7 +82,7 @@ export default function PublicProductLandingPage() {
           <div className="pt-4 flex flex-col items-center justify-center gap-3">
             <button
               onClick={handleStartCheckout}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white text-base sm:text-lg font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gray-950 hover:bg-black text-white text-base sm:text-lg font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
             >
               <span>{page.ctaText}</span>
               <ArrowRight className="w-5 h-5" />
@@ -95,7 +95,7 @@ export default function PublicProductLandingPage() {
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-indigo-600" />
+                <Clock className="w-3.5 h-3.5 text-gray-900" />
                 Instant Delivery
               </span>
               <span>•</span>
@@ -108,10 +108,10 @@ export default function PublicProductLandingPage() {
         </div>
 
         {/* Product Visual Card / What's Included */}
-        <div className="bg-white border border-gray-200/90 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8">
+        <div className="bg-white border border-gray-300 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-100">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-950">
                 What You Get Inside
               </span>
               <h2 className="text-2xl font-bold text-gray-950 mt-1">
@@ -150,8 +150,8 @@ export default function PublicProductLandingPage() {
             </h3>
             <div className="space-y-3">
               {page.curriculumOverview.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4 p-4 rounded-xl border border-gray-200/70 hover:border-indigo-200 transition-colors bg-white">
-                  <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-xs shrink-0">
+                <div key={idx} className="flex items-start gap-4 p-4 rounded-xl border border-gray-200/70 hover:border-gray-400 transition-colors bg-white">
+                  <div className="w-8 h-8 rounded-lg bg-gray-100 text-gray-900 font-bold flex items-center justify-center text-xs shrink-0">
                     {idx + 1}
                   </div>
                   <div>
@@ -168,14 +168,14 @@ export default function PublicProductLandingPage() {
 
         {/* Two Columns: Who is this for & Target Problems */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+          <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-3">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-950">
               Who This Is Perfect For
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
               {page.whoIsThisFor.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <span className="text-indigo-600 font-bold shrink-0">✓</span>
+                  <span className="text-gray-950 font-bold shrink-0">✓</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -198,8 +198,8 @@ export default function PublicProductLandingPage() {
         </div>
 
         {/* Creator Bio Section */}
-        <div className="bg-white border border-gray-200/80 rounded-3xl p-6 sm:p-10 shadow-2xs flex flex-col sm:flex-row items-center gap-6">
-          <div className="w-20 h-20 rounded-full bg-indigo-600 text-white font-extrabold text-2xl flex items-center justify-center shrink-0 shadow-md">
+        <div className="bg-white border border-gray-300 rounded-3xl p-6 sm:p-10 shadow-sm flex flex-col sm:flex-row items-center gap-6">
+          <div className="w-20 h-20 rounded-full bg-gray-950 text-white font-extrabold text-2xl flex items-center justify-center shrink-0 shadow-md">
             {creator.creator_name.slice(0, 2).toUpperCase()}
           </div>
           <div className="space-y-2 text-center sm:text-left">
@@ -214,7 +214,7 @@ export default function PublicProductLandingPage() {
         </div>
 
         {/* FAQs Section */}
-        <div className="bg-white border border-gray-200/80 rounded-3xl p-6 sm:p-10 shadow-2xs space-y-6">
+        <div className="bg-white border border-gray-300 rounded-3xl p-6 sm:p-10 shadow-sm space-y-6">
           <div className="text-center max-w-md mx-auto space-y-1">
             <h3 className="text-2xl font-bold text-gray-950">
               Frequently Asked Questions
@@ -265,7 +265,7 @@ export default function PublicProductLandingPage() {
           </h3>
           <button
             onClick={handleStartCheckout}
-            className="inline-flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white text-base sm:text-lg font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
+            className="inline-flex items-center justify-center gap-3 bg-gray-950 hover:bg-black text-white text-base sm:text-lg font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all cursor-pointer"
           >
             <span>{page.ctaText}</span>
             <ArrowRight className="w-5 h-5" />
@@ -291,7 +291,7 @@ export default function PublicProductLandingPage() {
           <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
             <div className="flex items-center justify-between border-b border-gray-100 pb-4">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-md bg-indigo-600 text-white font-bold text-xs flex items-center justify-center">
+                <div className="w-7 h-7 rounded-md bg-gray-950 text-white font-bold text-xs flex items-center justify-center">
                   M
                 </div>
                 <span className="font-bold text-sm text-gray-900">Secure Order</span>
@@ -309,7 +309,7 @@ export default function PublicProductLandingPage() {
               <p className="text-xs text-gray-500">Instant Digital Delivery via Email & Browser</p>
               <div className="pt-2 flex items-baseline justify-between">
                 <span className="text-xs text-gray-400 uppercase font-semibold">Total Due</span>
-                <span className="text-2xl font-black text-indigo-600">
+                <span className="text-2xl font-black text-gray-950">
                   {formatCurrency(product.price)}
                 </span>
               </div>
@@ -326,7 +326,7 @@ export default function PublicProductLandingPage() {
                   placeholder="you@company.com"
                   value={customerEmail}
                   onChange={(e) => setCustomerEmail(e.target.value)}
-                  className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+                  className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900"
                 />
               </div>
 
@@ -343,7 +343,7 @@ export default function PublicProductLandingPage() {
               <button
                 type="submit"
                 disabled={isCheckingOut}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white font-bold py-3 px-4 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                className="w-full bg-gray-950 hover:bg-black disabled:opacity-60 text-white font-bold py-3 px-4 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer"
               >
                 <span>{isCheckingOut ? 'Processing Payment...' : `Complete Order - ${formatCurrency(product.price)}`}</span>
                 <ArrowRight className="w-4 h-4" />

@@ -91,13 +91,13 @@ export default function SecureCustomerDownloadPage() {
           </div>
 
           {/* Download Action Box */}
-          <div className="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-gray-100 border border-gray-300 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="space-y-1 text-center sm:text-left">
-              <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-bold text-indigo-900">
-                <Clock className="w-3.5 h-3.5 text-indigo-600" />
+              <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-bold text-gray-950">
+                <Clock className="w-3.5 h-3.5 text-gray-950" />
                 <span>Expiring Signed Access: Valid for 48 Hours</span>
               </div>
-              <p className="text-xs text-indigo-700">
+              <p className="text-xs text-gray-600">
                 Downloaded {downloadCount} time{downloadCount === 1 ? '' : 's'}. A permanent confirmation email has also been sent to your inbox.
               </p>
               {downloadMessage && (
@@ -109,7 +109,7 @@ export default function SecureCustomerDownloadPage() {
 
             <button
               onClick={handleDownload}
-              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-colors shrink-0 cursor-pointer"
+              className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white font-bold text-sm px-6 py-3 rounded-xl shadow-xs transition-colors shrink-0 cursor-pointer"
             >
               <Download className="w-4 h-4" />
               <span>Download PDF Playbook</span>
@@ -122,7 +122,7 @@ export default function SecureCustomerDownloadPage() {
           <div className="flex items-center justify-between px-2">
             <div>
               <h2 className="text-lg font-bold text-gray-950 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-indigo-600" />
+                <BookOpen className="w-5 h-5 text-gray-950" />
                 <span>Read Online or Save Offline</span>
               </h2>
               <p className="text-xs text-gray-500">

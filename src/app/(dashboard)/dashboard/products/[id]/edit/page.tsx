@@ -144,7 +144,7 @@ export default function ProductEditorPage() {
       {/* Editor Sub-header */}
       <div className="bg-white border-b border-gray-300 px-6 py-3 flex items-center justify-between sticky top-0 z-20 shadow-xs">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 capitalize border border-indigo-200">
+          <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-gray-100 text-gray-950 capitalize border border-gray-300">
             {product.format} Studio
           </span>
           <span className="font-bold text-sm text-gray-900 truncate max-w-xs sm:max-w-md">
@@ -182,7 +182,7 @@ export default function ProductEditorPage() {
 
           <button
             onClick={() => router.push(`/dashboard/products/${product.id}/landing`)}
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors shadow-xs"
+            className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors shadow-xs"
           >
             <span>Next: Landing Page</span>
             <ArrowRight className="w-4 h-4" />
@@ -207,7 +207,7 @@ export default function ProductEditorPage() {
               </span>
               <button
                 onClick={handleAddSection}
-                className="p-1 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-indigo-600 transition-colors border border-gray-200"
+                className="p-1 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-black transition-colors border border-gray-200"
                 title="Add Section"
               >
                 <Plus className="w-4 h-4" />
@@ -221,20 +221,20 @@ export default function ProductEditorPage() {
                   onClick={() => setActiveSectionIndex(idx)}
                   className={`w-full text-left p-3 rounded-xl text-xs transition-colors flex items-start gap-2.5 ${
                     activeSectionIndex === idx
-                      ? 'bg-indigo-50 text-indigo-900 font-semibold border-2 border-indigo-300 shadow-2xs'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-transparent'
+                      ? 'bg-gray-950 text-white font-semibold shadow-xs'
+                      : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-transparent'
                   }`}
                 >
                   <span
                     className={`w-5 h-5 rounded-md flex items-center justify-center text-[10px] shrink-0 font-bold ${
-                      activeSectionIndex === idx ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-500'
+                      activeSectionIndex === idx ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-500'
                     }`}
                   >
                     {idx + 1}
                   </span>
                   <div className="truncate">
                     <p className="truncate">{sec.title}</p>
-                    <p className="text-[10px] text-gray-400 font-normal">
+                    <p className={`text-[10px] font-normal ${activeSectionIndex === idx ? 'text-gray-300' : 'text-gray-400'}`}>
                       {sec.subtitle || 'Chapter content'}
                     </p>
                   </div>
@@ -243,7 +243,7 @@ export default function ProductEditorPage() {
             </div>
 
             <div className="pt-4 border-t border-gray-200 text-[11px] text-gray-400 flex items-center gap-1.5">
-              <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+              <BookOpen className="w-3.5 h-3.5 text-gray-950" />
               <span>{product.content_json.sections.length} total chapters</span>
             </div>
           </aside>
@@ -251,13 +251,13 @@ export default function ProductEditorPage() {
           {/* Main Chapter Content Editor */}
           <div className="flex-1 p-6 sm:p-8 lg:p-10 w-full space-y-6">
             {/* AI Assistant Rewrite Toolbar */}
-            <div className="bg-white border border-indigo-200 rounded-2xl p-4 shadow-sm space-y-2">
+            <div className="bg-white border border-gray-300 rounded-2xl p-4 shadow-sm space-y-2">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-2 text-xs font-bold text-gray-900">
-                  <Wand2 className="w-4 h-4 text-indigo-600" />
+                  <Wand2 className="w-4 h-4 text-gray-950" />
                   <span>AI Assistant Actions:</span>
                   {rewriteStatus && (
-                    <span className="text-indigo-600 text-[11px] font-normal animate-pulse">
+                    <span className="text-gray-900 text-[11px] font-semibold animate-pulse">
                       {rewriteStatus}
                     </span>
                   )}
@@ -267,28 +267,28 @@ export default function ProductEditorPage() {
                   <button
                     onClick={() => handleAIRewrite('expand')}
                     disabled={isRewriting}
-                    className="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-lg font-medium transition-colors"
+                    className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-900 px-3 py-1.5 rounded-lg font-medium transition-colors border border-gray-200"
                   >
                     + Expand Content
                   </button>
                   <button
                     onClick={() => handleAIRewrite('make_actionable')}
                     disabled={isRewriting}
-                    className="text-xs bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg font-medium transition-colors"
+                    className="text-xs bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-lg font-medium transition-colors border border-emerald-200"
                   >
                     Make Actionable (Checklists)
                   </button>
                   <button
                     onClick={() => handleAIRewrite('summarize')}
                     disabled={isRewriting}
-                    className="text-xs bg-violet-50 hover:bg-violet-100 text-violet-700 px-3 py-1.5 rounded-lg font-medium transition-colors"
+                    className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-900 px-3 py-1.5 rounded-lg font-medium transition-colors border border-gray-200"
                   >
                     Summarize Key Takeaways
                   </button>
                   <button
                     onClick={() => handleAIRewrite('simplify')}
                     disabled={isRewriting}
-                    className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-medium transition-colors"
+                    className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg font-medium transition-colors border border-gray-200"
                   >
                     Simplify Tone
                   </button>
@@ -299,7 +299,7 @@ export default function ProductEditorPage() {
             {/* Chapter Header Form */}
             <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
+                <span className="text-xs font-bold uppercase tracking-wider text-gray-950">
                   Chapter {activeSectionIndex + 1}
                 </span>
                 {product.content_json.sections.length > 1 && (
@@ -321,7 +321,7 @@ export default function ProductEditorPage() {
                   type="text"
                   value={activeSection.title}
                   onChange={(e) => handleUpdateSectionField('title', e.target.value)}
-                  className="w-full text-base font-bold text-gray-950 border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                  className="w-full text-base font-bold text-gray-950 border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
                 />
               </div>
 
@@ -333,7 +333,7 @@ export default function ProductEditorPage() {
                   type="text"
                   value={activeSection.subtitle || ''}
                   onChange={(e) => handleUpdateSectionField('subtitle', e.target.value)}
-                  className="w-full text-xs text-gray-600 border border-gray-300 rounded-xl px-3.5 py-2 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                  className="w-full text-xs text-gray-600 border border-gray-300 rounded-xl px-3.5 py-2 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
                 />
               </div>
             </div>
@@ -353,7 +353,7 @@ export default function ProductEditorPage() {
                 rows={16}
                 value={activeSection.content}
                 onChange={(e) => handleUpdateSectionContent(e.target.value)}
-                className="w-full font-mono text-sm leading-relaxed text-gray-800 border border-gray-300 rounded-xl p-4 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                className="w-full font-mono text-sm leading-relaxed text-gray-800 border border-gray-300 rounded-xl p-4 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
               />
             </div>
           </div>

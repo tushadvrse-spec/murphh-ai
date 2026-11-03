@@ -68,7 +68,7 @@ export default function AnalyticsPage() {
         <div className="bg-white border border-gray-300 rounded-2xl p-5 shadow-sm">
           <div className="flex items-center justify-between text-gray-500 text-xs font-semibold uppercase tracking-wider">
             <span>Paid Customer Orders</span>
-            <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600">
+            <div className="p-2 rounded-lg bg-gray-100 text-gray-900">
               <ShoppingBag className="w-4 h-4" />
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function AnalyticsPage() {
                     <Link
                       href={`/download/${order.download_token}`}
                       target="_blank"
-                      className="inline-flex items-center gap-1 font-semibold text-indigo-600 hover:text-indigo-800 text-[11px]"
+                      className="inline-flex items-center gap-1 font-semibold text-gray-900 hover:text-black hover:underline text-[11px]"
                     >
                       <span>Delivery Page</span>
                       <ExternalLink className="w-3 h-3" />

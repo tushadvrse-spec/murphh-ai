@@ -43,7 +43,7 @@ export default function SettingsPage() {
       {/* Stripe Connect Card */}
       <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
         <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-          <CreditCard className="w-4 h-4 text-indigo-600" />
+          <CreditCard className="w-4 h-4 text-gray-950" />
           <span>Payouts & Payment Gateway (Stripe Connect)</span>
         </div>
 
@@ -73,22 +73,22 @@ export default function SettingsPage() {
       {/* AI Engine & API Keys Card */}
       <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
         <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-          <Key className="w-4 h-4 text-indigo-600" />
+          <Key className="w-4 h-4 text-gray-950" />
           <span>AI Engine Configuration</span>
         </div>
 
         <div className="space-y-3 text-xs">
-          <div className="p-3.5 bg-indigo-50/60 border border-indigo-100 rounded-xl space-y-1">
-            <span className="font-bold text-indigo-950">Multi-Model Orchestrator Active</span>
-            <p className="text-indigo-800/80 leading-relaxed">
-              Murphh AI routes content research to Gemini 2.5/3.8 Flash (fast, 1M context) and chapter generation to Claude 3.5 Sonnet / GPT-4o. You can configure your own BYOK (Bring Your Own Key) in <code className="font-mono text-indigo-900">.env.local</code>.
+          <div className="p-3.5 bg-gray-100 border border-gray-300 rounded-xl space-y-1">
+            <span className="font-bold text-gray-950">Multi-Model Orchestrator Active</span>
+            <p className="text-gray-700 leading-relaxed">
+              Murphh AI routes content research to Gemini 2.5/3.8 Flash (fast, 1M context) and chapter generation to Claude 3.5 Sonnet / GPT-4o. You can configure your own BYOK (Bring Your Own Key) in <code className="font-mono text-gray-950">.env.local</code>.
             </p>
           </div>
         </div>
       </div>
 
       {/* Security & Access */}
-      <div className="bg-white border border-gray-200/80 rounded-2xl p-6 shadow-2xs space-y-4">
+      <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
         <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-100 pb-3">
           <Shield className="w-4 h-4 text-emerald-600" />
           <span>Security & Row Level Isolation</span>

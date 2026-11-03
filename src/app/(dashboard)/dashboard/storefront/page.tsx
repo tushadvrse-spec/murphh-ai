@@ -13,7 +13,7 @@ import { initialCreatorProfile, initialProduct } from '@/lib/mock-storage';
 
 export default function StorefrontSettingsPage() {
   const [profile, setProfile] = useState(initialCreatorProfile);
-  const [brandColor, setBrandColor] = useState(profile.brand_preferences.primaryColor || '#4f46e5');
+  const [brandColor, setBrandColor] = useState(profile.brand_preferences.primaryColor || '#111827');
   const [isSaved, setIsSaved] = useState(false);
 
   const handleSave = () => {
@@ -45,7 +45,7 @@ export default function StorefrontSettingsPage() {
       {/* Storefront Settings Form */}
       <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-6">
         <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-          <Palette className="w-4 h-4 text-indigo-600" />
+          <Palette className="w-4 h-4 text-gray-950" />
           <span>Brand Identity & Visual Tone</span>
         </div>
 
@@ -58,7 +58,7 @@ export default function StorefrontSettingsPage() {
               type="text"
               value={profile.creator_name}
               onChange={(e) => setProfile({ ...profile, creator_name: e.target.value })}
-              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
             />
           </div>
 
@@ -73,7 +73,7 @@ export default function StorefrontSettingsPage() {
               <input
                 type="text"
                 defaultValue="elena"
-                className="w-full text-sm border border-gray-200 rounded-r-xl px-3 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 font-mono"
+                className="w-full text-sm border border-gray-200 rounded-r-xl px-3 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 font-mono"
               />
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function StorefrontSettingsPage() {
             rows={3}
             value={profile.bio || ''}
             onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
-            className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+            className="w-full text-sm border border-gray-200 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900"
           />
         </div>
 
@@ -97,7 +97,7 @@ export default function StorefrontSettingsPage() {
           </span>
           <button
             onClick={handleSave}
-            className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-2xs"
+            className="flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-2xs"
           >
             <Save className="w-4 h-4" />
             <span>Save Storefront</span>

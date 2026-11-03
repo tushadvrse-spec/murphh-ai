@@ -9,8 +9,8 @@ export const initialCreatorProfile: CreatorProfile = {
   bio: 'Former VP of Operations turned creator. Helping 45,000+ knowledge workers build async work habits, eliminate useless meetings, and work without burnout.',
   audience_description: 'Mid-career managers, startup leads, software developers, and remote professionals struggling with meeting overload, Slack distractions, and poor task prioritization.',
   brand_preferences: {
-    primaryColor: '#4f46e5',
-    accentColor: '#6366f1',
+    primaryColor: '#111827',
+    accentColor: '#1f2937',
     fontFamily: 'Inter',
     tone: 'actionable, crisp, and empathetic',
   },
@@ -178,7 +178,7 @@ Whenever an initiative needs alignment, write a concise 1-page memo using this e
   branding_json: {
     coverTitle: 'The Async Meeting Elimination Playbook',
     coverSubtitle: 'How to reclaim 10 hours a week and build a high-velocity focus culture',
-    accentColor: '#4f46e5',
+    accentColor: '#111827',
     authorName: 'Elena Vance',
   },
   cover_image_url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',

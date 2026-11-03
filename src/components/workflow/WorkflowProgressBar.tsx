@@ -79,7 +79,7 @@ export function WorkflowProgressBar({
                       isCompleted
                         ? 'bg-emerald-600 text-white shadow-xs'
                         : isCurrent
-                        ? 'bg-indigo-600 text-white ring-4 ring-indigo-50 shadow-xs'
+                        ? 'bg-gray-950 text-white ring-4 ring-gray-200 shadow-xs'
                         : 'bg-gray-100 text-gray-400 group-hover:bg-gray-200 group-hover:text-gray-600'
                     }`}
                   >
@@ -89,7 +89,7 @@ export function WorkflowProgressBar({
                     <p
                       className={`text-xs font-semibold tracking-tight transition-colors ${
                         isCurrent
-                          ? 'text-indigo-600'
+                          ? 'text-gray-950 font-bold'
                           : isCompleted
                           ? 'text-gray-900'
                           : 'text-gray-400 group-hover:text-gray-600'
@@ -119,7 +119,7 @@ export function WorkflowProgressBar({
         {stepStatusText && (
           <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+              <Sparkles className="w-3.5 h-3.5 text-gray-900" />
               <span>{stepStatusText}</span>
             </div>
             <span className="text-[11px] text-gray-400 font-mono">

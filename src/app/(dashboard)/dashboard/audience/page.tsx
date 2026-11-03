@@ -69,14 +69,14 @@ export default function AudienceIntelligencePage() {
             <button
               onClick={handleRunAnalysis}
               disabled={isAnalyzing}
-              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs"
+              className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black disabled:opacity-60 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs"
             >
               <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />
               <span>{isAnalyzing ? 'Analyzing Content...' : 'Re-Analyze Content'}</span>
             </button>
             <button
               onClick={() => router.push('/dashboard/discover')}
-              className="inline-flex items-center gap-2 bg-gray-900 hover:bg-black text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
             >
               <span>Next: Discover Ideas</span>
               <ArrowRight className="w-4 h-4" />
@@ -94,7 +94,7 @@ export default function AudienceIntelligencePage() {
         {/* Input & Source Section */}
         <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-5">
           <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-            <FileText className="w-4 h-4 text-indigo-600" />
+            <FileText className="w-4 h-4 text-gray-950" />
             <span>Content Ingestion & Profile Inputs</span>
           </div>
 
@@ -107,7 +107,7 @@ export default function AudienceIntelligencePage() {
                 type="text"
                 value={profile.creator_name}
                 onChange={(e) => setProfile({ ...profile, creator_name: e.target.value })}
-                className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
               />
             </div>
 
@@ -119,7 +119,7 @@ export default function AudienceIntelligencePage() {
                 type="text"
                 value={profile.niche || ''}
                 onChange={(e) => setProfile({ ...profile, niche: e.target.value })}
-                className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+                className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function AudienceIntelligencePage() {
               rows={2}
               value={profile.bio || ''}
               onChange={(e) => setProfile({ ...profile, bio: e.target.value })}
-              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 bg-white"
+              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 bg-white"
             />
           </div>
 
@@ -145,7 +145,7 @@ export default function AudienceIntelligencePage() {
               placeholder="Paste newsletter excerpts, YouTube transcripts, popular threads, or common audience questions here to enrich the AI analysis..."
               value={sampleInput}
               onChange={(e) => setSampleInput(e.target.value)}
-              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 placeholder:text-gray-400 bg-white"
+              className="w-full text-sm border border-gray-300 rounded-xl px-3.5 py-2.5 focus:outline-hidden focus:ring-2 focus:ring-gray-900/10 focus:border-gray-900 placeholder:text-gray-400 bg-white"
             />
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function AudienceIntelligencePage() {
         {/* AI Analysis Cards Grid */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm font-bold text-gray-900">
-            <BrainCircuit className="w-4 h-4 text-indigo-600" />
+            <BrainCircuit className="w-4 h-4 text-gray-950" />
             <span>Extracted Audience Intelligence Report</span>
           </div>
 
@@ -164,7 +164,7 @@ export default function AudienceIntelligencePage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
                   Target Niche & Sub-Verticals
                 </span>
-                <span className="p-1 rounded-md bg-indigo-50 text-indigo-600 border border-indigo-100">
+                <span className="p-1 rounded-md bg-gray-100 text-gray-900 border border-gray-300">
                   <Target className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -244,18 +244,18 @@ export default function AudienceIntelligencePage() {
         </div>
 
         {/* Step Progression CTA */}
-        <div className="bg-white border-2 border-indigo-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+        <div className="bg-white border-2 border-gray-400 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div>
-            <h4 className="text-sm font-bold text-indigo-950">
+            <h4 className="text-sm font-bold text-gray-950">
               Ready to see your recommended product opportunities?
             </h4>
-            <p className="text-xs text-indigo-700 mt-0.5">
+            <p className="text-xs text-gray-600 mt-0.5">
               The Product Strategy Agent will match these pain points with downloadable formats and pricing models.
             </p>
           </div>
           <button
             onClick={() => router.push('/dashboard/discover')}
-            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shrink-0 shadow-xs"
+            className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors shrink-0 shadow-xs"
           >
             <span>Proceed to Step 2: Product Ideas</span>
             <ArrowRight className="w-4 h-4" />

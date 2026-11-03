@@ -96,7 +96,7 @@ export default function DiscoverIdeasPage() {
             <button
               onClick={handleGenerateIdeas}
               disabled={isGenerating}
-              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs shrink-0"
+              className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black disabled:opacity-60 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs shrink-0"
             >
               <Sparkles className={`w-4 h-4 ${isGenerating ? 'animate-spin' : ''}`} />
               <span>{isGenerating ? 'Analyzing Opportunities...' : 'Discover More Ideas'}</span>
@@ -105,17 +105,17 @@ export default function DiscoverIdeasPage() {
         </div>
 
         {/* Active Niche & Source Context Banner */}
-        <div className="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+        <div className="bg-gray-100 border border-gray-300 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-indigo-600" />
+            <span className="w-2 h-2 rounded-full bg-gray-950" />
             <span className="text-gray-600">Currently analyzing niche:</span>
-            <span className="font-bold text-indigo-950 bg-white px-2.5 py-1 rounded-lg border border-indigo-100 shadow-2xs">
+            <span className="font-bold text-gray-950 bg-white px-2.5 py-1 rounded-lg border border-gray-300 shadow-2xs">
               Productivity & Remote Work Systems
             </span>
           </div>
           <button
             onClick={() => router.push('/dashboard/audience')}
-            className="text-indigo-600 hover:text-indigo-800 font-semibold underline underline-offset-2 flex items-center gap-1"
+            className="text-gray-900 hover:text-black font-semibold underline underline-offset-2 flex items-center gap-1"
           >
             <span>Change niche or connect social content in Step 1 →</span>
           </button>
@@ -135,8 +135,8 @@ export default function DiscoverIdeasPage() {
                 onClick={() => setFormatFilter(fmt)}
                 className={`text-xs px-3 py-1.5 rounded-xl capitalize font-medium transition-colors ${
                   formatFilter === fmt
-                    ? 'bg-indigo-50 text-indigo-700 font-semibold border border-indigo-200/60'
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    ? 'bg-gray-950 text-white font-semibold shadow-xs'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                 }`}
               >
                 {fmt === 'prompt_pack' ? 'Prompt Pack' : fmt}
@@ -154,12 +154,12 @@ export default function DiscoverIdeasPage() {
           {filteredIdeas.map((idea) => (
             <div
               key={idea.id || idea.title}
-              className="bg-white border border-gray-300 hover:border-indigo-500 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md group"
+              className="bg-white border border-gray-300 hover:border-gray-800 rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md group"
             >
               <div className="space-y-4">
                 {/* Header Tag & Price */}
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200 uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-gray-100 text-gray-900 border border-gray-300 uppercase tracking-wider">
                     {getFormatIcon(idea.format)}
                     <span>{idea.format.replace('_', ' ')}</span>
                   </span>
@@ -172,7 +172,7 @@ export default function DiscoverIdeasPage() {
 
                 {/* Title & Audience */}
                 <div>
-                  <h3 className="text-lg font-bold text-gray-950 group-hover:text-indigo-600 transition-colors leading-snug">
+                  <h3 className="text-lg font-bold text-gray-950 group-hover:text-black transition-colors leading-snug">
                     {idea.title}
                   </h3>
                   <p className="text-xs text-gray-500 mt-1 line-clamp-2">
@@ -220,7 +220,7 @@ export default function DiscoverIdeasPage() {
               <div className="pt-6 mt-4 border-t border-gray-100">
                 <button
                   onClick={() => handleSelectIdea(idea)}
-                  className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-indigo-600 text-white text-xs font-semibold py-2.5 px-4 rounded-xl transition-all shadow-2xs"
+                  className="w-full flex items-center justify-center gap-2 bg-gray-950 hover:bg-black text-white text-xs font-semibold py-2.5 px-4 rounded-xl transition-all shadow-2xs"
                 >
                   <span>Select & Build Product</span>
                   <ArrowRight className="w-3.5 h-3.5" />

@@ -17,12 +17,12 @@ import { formatCurrency } from '@/lib/utils';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#fafaf9] text-gray-950 font-sans antialiased selection:bg-indigo-100">
+    <div className="min-h-screen bg-[#fafaf9] text-gray-950 font-sans antialiased selection:bg-gray-200">
       {/* Top Navbar */}
       <header className="border-b border-gray-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-30">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-gray-950 flex items-center justify-center text-white font-bold text-sm shadow-xs">
               M
             </div>
             <span className="font-extrabold text-base tracking-tight text-gray-950">
@@ -33,13 +33,13 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <Link
               href="/elena/async-playbook"
-              className="text-xs font-semibold text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-lg transition-colors hidden sm:block"
+              className="text-xs font-semibold text-gray-600 hover:text-gray-950 px-3 py-2 rounded-lg transition-colors hidden sm:block"
             >
               Sample Storefront
             </Link>
             <Link
               href="/dashboard"
-              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-xs"
+              className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition-all shadow-xs"
             >
               <span>Launch Studio</span>
               <ArrowRight className="w-4 h-4" />
@@ -50,14 +50,14 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="max-w-5xl mx-auto px-6 pt-16 sm:pt-24 pb-16 text-center space-y-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/60 text-indigo-700 text-xs font-semibold">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-gray-900 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
           <span>The AI Creator Business Platform</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-gray-950 max-w-4xl mx-auto leading-tight">
           Turn your content and expertise into digital products you can sell —{' '}
-          <span className="text-indigo-600">in 30 minutes</span>.
+          <span className="text-gray-950 underline decoration-gray-400">in 30 minutes</span>.
         </h1>
 
         <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
@@ -68,7 +68,7 @@ export default function HomePage() {
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             href="/dashboard"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-base font-bold px-8 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gray-950 hover:bg-black text-white text-base font-bold px-8 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all"
           >
             <span>Enter Creator Workspace</span>
             <ArrowRight className="w-4 h-4" />
@@ -101,7 +101,7 @@ export default function HomePage() {
 
       {/* 5-Step Guided Workflow Banner */}
       <section className="max-w-6xl mx-auto px-6 py-12">
-        <div className="bg-white border border-gray-200/80 rounded-3xl p-8 sm:p-12 shadow-sm space-y-8">
+        <div className="bg-white border border-gray-300 rounded-3xl p-8 sm:p-12 shadow-sm space-y-8">
           <div className="text-center max-w-xl mx-auto space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-950">
               The Guided 5-Step Creator Pipeline
@@ -113,7 +113,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
             <div className="p-5 rounded-2xl bg-gray-50/70 border border-gray-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gray-100 text-gray-900 font-bold text-xs flex items-center justify-center">
                 1
               </div>
               <h3 className="text-sm font-bold text-gray-900">Profile & Niche</h3>
@@ -123,7 +123,7 @@ export default function HomePage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-gray-50/70 border border-gray-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gray-100 text-gray-900 font-bold text-xs flex items-center justify-center">
                 2
               </div>
               <h3 className="text-sm font-bold text-gray-900">Idea Discovery</h3>
@@ -133,7 +133,7 @@ export default function HomePage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-gray-50/70 border border-gray-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gray-100 text-gray-900 font-bold text-xs flex items-center justify-center">
                 3
               </div>
               <h3 className="text-sm font-bold text-gray-900">Create & Edit</h3>
@@ -143,7 +143,7 @@ export default function HomePage() {
             </div>
 
             <div className="p-5 rounded-2xl bg-gray-50/70 border border-gray-100 space-y-2">
-              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-gray-100 text-gray-900 font-bold text-xs flex items-center justify-center">
                 4
               </div>
               <h3 className="text-sm font-bold text-gray-900">Landing Page</h3>

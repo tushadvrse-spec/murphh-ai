@@ -34,7 +34,7 @@ export default function ProductsListPage() {
 
         <Link
           href="/dashboard/discover"
-          className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs shrink-0"
+          className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-2xs shrink-0"
         >
           <PlusCircle className="w-4 h-4" />
           <span>Create New Product</span>
@@ -46,7 +46,7 @@ export default function ProductsListPage() {
         {products.map((product) => (
           <div
             key={product.id}
-            className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm hover:border-indigo-500 transition-colors"
+            className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm hover:border-gray-500 transition-colors"
           >
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div className="space-y-2">
@@ -83,7 +83,7 @@ export default function ProductsListPage() {
               <div className="flex items-center gap-2">
                 <Link
                   href={`/dashboard/products/${product.id}/edit`}
-                  className="inline-flex items-center gap-1.5 font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors"
+                  className="inline-flex items-center gap-1.5 font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors border border-gray-200"
                 >
                   <Edit3 className="w-3.5 h-3.5" />
                   Edit Studio
@@ -91,7 +91,7 @@ export default function ProductsListPage() {
 
                 <Link
                   href={`/dashboard/products/${product.id}/landing`}
-                  className="inline-flex items-center gap-1.5 font-semibold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-3 py-1.5 rounded-lg transition-colors"
+                  className="inline-flex items-center gap-1.5 font-semibold text-gray-900 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors border border-gray-200"
                 >
                   <span>Landing Page</span>
                 </Link>
@@ -99,7 +99,7 @@ export default function ProductsListPage() {
                 <Link
                   href={product.slug ? `/elena/${product.slug}` : '/elena/async-playbook'}
                   target="_blank"
-                  className="inline-flex items-center gap-1.5 font-semibold text-indigo-700 bg-white border border-indigo-200 hover:bg-indigo-50 px-3 py-1.5 rounded-lg transition-colors"
+                  className="inline-flex items-center gap-1.5 font-semibold text-gray-950 bg-white border border-gray-300 hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-colors shadow-2xs"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
                   Live Storefront

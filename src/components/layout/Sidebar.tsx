@@ -62,7 +62,7 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
       {/* Brand Header */}
       <div className="h-16 px-6 border-b border-gray-200 flex items-center justify-between">
         <Link href="/dashboard" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-base shadow-xs">
+          <div className="w-8 h-8 rounded-lg bg-gray-950 flex items-center justify-center text-white font-bold text-base shadow-xs">
             M
           </div>
           <div>
@@ -91,11 +91,11 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
               href={item.href}
               className={`flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
                 isActive
-                  ? 'bg-indigo-50 text-indigo-700 font-semibold'
-                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  ? 'bg-gray-900 text-white font-semibold shadow-xs'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
-              <Icon className={`w-4 h-4 ${isActive ? 'text-indigo-600' : 'text-gray-400'}`} />
+              <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-gray-400'}`} />
               <span>{item.label}</span>
             </Link>
           );
@@ -110,7 +110,7 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
             {/* User Header */}
             <div className="p-2.5 pb-2 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-xs shadow-xs">
+                <div className="w-8 h-8 rounded-full bg-gray-950 text-white font-bold flex items-center justify-center text-xs shadow-xs">
                   {creatorName.slice(0, 2).toUpperCase()}
                 </div>
                 <div>
@@ -118,7 +118,7 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
                   <p className="text-[11px] text-gray-500 mt-0.5">elena@vancecreator.com</p>
                 </div>
               </div>
-              <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+              <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-gray-900 bg-gray-100 border border-gray-300 px-2 py-0.5 rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 Pro
               </span>
@@ -131,17 +131,17 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
                 onClick={() => setIsProfileOpen(false)}
                 className={`flex items-center justify-between w-full p-2 rounded-xl transition-colors ${
                   pathname === '/dashboard/storefront'
-                    ? 'bg-indigo-50 text-indigo-700 font-semibold'
+                    ? 'bg-gray-900 text-white font-semibold'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-indigo-100 text-indigo-700">
+                  <div className={`p-1.5 rounded-lg ${pathname === '/dashboard/storefront' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'}`}>
                     <Store className="w-3.5 h-3.5" />
                   </div>
                   <div>
-                    <span className="font-semibold block text-gray-900 text-xs">Storefront & Branding</span>
-                    <span className="text-[10px] text-gray-500 block">Manage bio, slug & visual palette</span>
+                    <span className="font-semibold block text-xs">Storefront & Branding</span>
+                    <span className={`text-[10px] block ${pathname === '/dashboard/storefront' ? 'text-gray-300' : 'text-gray-500'}`}>Manage bio, slug & visual palette</span>
                   </div>
                 </div>
                 <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -152,17 +152,17 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
                 onClick={() => setIsProfileOpen(false)}
                 className={`flex items-center justify-between w-full p-2 rounded-xl transition-colors ${
                   pathname === '/dashboard/audience'
-                    ? 'bg-indigo-50 text-indigo-700 font-semibold'
+                    ? 'bg-gray-900 text-white font-semibold'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-purple-100 text-purple-700">
+                  <div className={`p-1.5 rounded-lg ${pathname === '/dashboard/audience' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'}`}>
                     <Users className="w-3.5 h-3.5" />
                   </div>
                   <div>
-                    <span className="font-semibold block text-gray-900 text-xs">Audience & Niche</span>
-                    <span className="text-[10px] text-gray-500 block">AI persona & problem audit</span>
+                    <span className="font-semibold block text-xs">Audience & Niche</span>
+                    <span className={`text-[10px] block ${pathname === '/dashboard/audience' ? 'text-gray-300' : 'text-gray-500'}`}>AI persona & problem audit</span>
                   </div>
                 </div>
                 <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -173,17 +173,17 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
                 onClick={() => setIsProfileOpen(false)}
                 className={`flex items-center justify-between w-full p-2 rounded-xl transition-colors ${
                   pathname === '/dashboard/settings'
-                    ? 'bg-indigo-50 text-indigo-700 font-semibold'
+                    ? 'bg-gray-900 text-white font-semibold'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-gray-100 text-gray-700">
+                  <div className={`p-1.5 rounded-lg ${pathname === '/dashboard/settings' ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'}`}>
                     <Settings className="w-3.5 h-3.5" />
                   </div>
                   <div>
-                    <span className="font-semibold block text-gray-900 text-xs">Account & Integrations</span>
-                    <span className="text-[10px] text-gray-500 block">Stripe payouts, Gemini keys</span>
+                    <span className="font-semibold block text-xs">Account & Integrations</span>
+                    <span className={`text-[10px] block ${pathname === '/dashboard/settings' ? 'text-gray-300' : 'text-gray-500'}`}>Stripe payouts, Gemini keys</span>
                   </div>
                 </div>
                 <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -215,7 +215,7 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
                   <HelpCircle className="w-3.5 h-3.5 text-gray-500" />
                   <span className="font-medium text-gray-800 text-xs">Creator Guide & Docs</span>
                 </div>
-                <span className="text-[10px] text-indigo-600 font-semibold">v1.0</span>
+                <span className="text-[10px] text-gray-900 font-bold">v1.0</span>
               </Link>
             </div>
 
@@ -243,7 +243,7 @@ export function Sidebar({ creatorName = 'Elena Vance' }: SidebarProps) {
           className="w-full flex items-center justify-between p-2 rounded-xl hover:bg-gray-100 transition-all text-left group focus:outline-hidden border border-transparent hover:border-gray-300"
         >
           <div className="flex items-center gap-2.5 truncate">
-            <div className="w-9 h-9 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-xs border border-indigo-200 shrink-0">
+            <div className="w-9 h-9 rounded-full bg-gray-950 text-white font-bold flex items-center justify-center text-xs border border-gray-800 shrink-0">
               {creatorName.slice(0, 2).toUpperCase()}
             </div>
             <div className="truncate flex-1">

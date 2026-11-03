@@ -75,7 +75,7 @@ export default function PublishProductPage() {
               className={`inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-all shadow-2xs ${
                 status === 'published'
                   ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
-                  : 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                  : 'bg-gray-950 hover:bg-black text-white'
               }`}
             >
               <CheckCircle className="w-4 h-4" />
@@ -87,7 +87,7 @@ export default function PublishProductPage() {
         {/* Live Storefront URL Card */}
         <div className="bg-white border border-gray-300 rounded-2xl p-6 shadow-sm space-y-4">
           <div className="flex items-center gap-2 text-sm font-bold text-gray-900 border-b border-gray-200 pb-3">
-            <Globe className="w-4 h-4 text-indigo-600" />
+            <Globe className="w-4 h-4 text-gray-950" />
             <span>Public Storefront Link</span>
           </div>
 
@@ -112,7 +112,7 @@ export default function PublishProductPage() {
             <Link
               href={publicUrl}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors border border-indigo-200"
+              className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-900 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors border border-gray-300"
             >
               <ExternalLink className="w-4 h-4" />
               <span>Visit Page</span>
@@ -170,23 +170,23 @@ export default function PublishProductPage() {
         </div>
 
         {/* Test Order Simulator */}
-        <div className="bg-indigo-50/70 border border-indigo-100 rounded-2xl p-6 space-y-4">
+        <div className="bg-gray-100 border border-gray-300 rounded-2xl p-6 space-y-4">
           <div className="flex items-center justify-between">
             <div className="space-y-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-700">
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-700">
                 Creator Test Tool
               </span>
-              <h4 className="text-sm font-bold text-indigo-950">
+              <h4 className="text-sm font-bold text-gray-950">
                 Simulate a Customer Purchase & Test Delivery
               </h4>
-              <p className="text-xs text-indigo-700/90">
+              <p className="text-xs text-gray-600">
                 Test the complete checkout confirmation, webhook simulation, and expiring download page as an end customer.
               </p>
             </div>
 
             <Link
               href="/download/d8e4f1a2-3b4c-4d5e-9f0a-1b2c3d4e5f60"
-              className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors shrink-0 shadow-2xs"
+              className="inline-flex items-center gap-2 bg-gray-950 hover:bg-black text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors shrink-0 shadow-2xs"
             >
               <DownloadCloud className="w-4 h-4" />
               <span>Test Download Page</span>
